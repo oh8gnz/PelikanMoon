@@ -150,15 +150,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128593093}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.0014387617, w: 0.999999}
-  m_LocalPosition: {x: -4.7, y: 27.9, z: -11.3}
+  m_LocalRotation: {x: -0.00093216525, y: -0.6473879, z: 0.0010974231, w: 0.76215935}
+  m_LocalPosition: {x: 0, y: 160, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1570865309}
   - {fileID: 963194228}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.165}
+  m_LocalEulerAnglesHint: {x: 0, y: -80.69, z: 0.165}
 --- !u!65 &128593095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1087,13 +1087,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.19669947, y: 5.820766e-11, z: -0, w: 0.98046386}
-  m_LocalPosition: {x: -0, y: 0.151, z: -0.384}
+  m_LocalRotation: {x: 0.33030123, y: 1.1641531e-10, z: -1.1641531e-10, w: 0.94387555}
+  m_LocalPosition: {x: -2.2351741e-10, y: 0.225, z: -0.325}
   m_LocalScale: {x: 0.03587395, y: 0.009768288, z: 0.0053726956}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 128593094}
-  m_LocalEulerAnglesHint: {x: 22.688, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 38.574, y: 0, z: 0}
 --- !u!1001 &1094463905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2018,7 +2018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabBullet: {fileID: 3544992039043628589, guid: cf5a525eb6ccb7841beca01504b96405, type: 3}
-  BulletSpeed: 9.2
+  BulletSpeed: 0.2
   BulletInterval: 0.5
   LifeTime: 7.02
   PelikanAttackActivated: 1
