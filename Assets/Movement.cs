@@ -16,12 +16,14 @@ public class Movement : MonoBehaviour
     public float RotationThreshold = 1.635f;
     float xRot, yRot;
     public bool bTrigger = false;
+    public GameObject GoToGameObject;
 
     // Start is called before the first frame update
     void Start()
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Input.gyro.enabled = true;
+        Time.timeScale = 1;
 
         rb = GetComponent<Rigidbody>();
         bCollided = false;
@@ -30,6 +32,8 @@ public class Movement : MonoBehaviour
         DebugText.GetComponent<TextMeshProUGUI>().text = "";
         GoalText = GameObject.FindGameObjectWithTag("Goal");
         GoalText.GetComponent<TextMeshProUGUI>().text = "";
+        GoToGameObject = GameObject.FindGameObjectWithTag("GoToButton");
+        GoToGameObject.SetActive(false);
 
     }
 
@@ -77,13 +81,14 @@ public class Movement : MonoBehaviour
         bCollided = true;
         
         if (collision.gameObject.tag == "Finish" && rb.velocity.y > -3)
-        {
-            
-            
+        {  
             GoalText.GetComponent<TextMeshProUGUI>().text = "Mission Completed!\n\nHit: " +((int)Math.Round((25-Vector3.Distance(new Vector3(-35.89f,10.8f,-5.24f), PointOfCollision))*4)).ToString() +"%";
         } else if(collision.gameObject.tag == "Pelikan")
         {
             GoalText.GetComponent<TextMeshProUGUI>().text = "Pelikan Hit The Fan And You Died!";
+        } else if(rb.velocity.y < -3)
+        {
+            GoalText.GetComponent<TextMeshProUGUI>().text = "You Crashed And Burned!";
         } else
         {
             GoalText.GetComponent<TextMeshProUGUI>().text = "You Missed The Platform And You Died!";
@@ -91,5 +96,6 @@ public class Movement : MonoBehaviour
 
 
         Time.timeScale = 0;
+        GoToGameObject.SetActive(true);
     }
 }
