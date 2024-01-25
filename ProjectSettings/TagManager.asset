@@ -6,6 +6,9 @@ TagManager:
   tags:
   - DebugRotation
   - Speed
+  - Pelikan
+  - End
+  - Goal
   layers:
   - Default
   - TransparentFX
